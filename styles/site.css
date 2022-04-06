@@ -71,6 +71,11 @@ nav ul li {
   margin-bottom: 10px;
 }
 
+.mobilenav {
+  display: none;
+  visibility: hidden;
+}
+
 @media only screen and (max-width: 600px) {
   body {
     /* background-color: lightblue; */
@@ -92,4 +97,17 @@ nav ul li {
     visibility: hidden;
     flex-direction: column;
   }
+
+  .mobilenav {
+    display: flex;
+    flex-direction: row;
+    visibility: visible;
+    justify-content: space-around;
+  }
+
+  .item {
+    align-items: stretch;
+  }
+
+
 }
