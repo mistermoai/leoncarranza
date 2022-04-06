@@ -1,12 +1,7 @@
 body {
   background-color: #f7efeb;
   font-family: sans-serif;
-}
-
-a h1 {
-  color: white;
-  background-color: #4C676F;
-  text-decoration: none;
+  max-width: 100%;
 }
 
 a {
@@ -74,4 +69,22 @@ nav ul li {
 
 .description {
   margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
 }
