@@ -73,7 +73,7 @@ nav ul li {
 
 @media only screen and (max-width: 600px) {
   body {
-    background-color: lightblue;
+    /* background-color: lightblue; */
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -83,8 +83,13 @@ nav ul li {
     text-align: center;
   }
 
+  header h1 a {
+    font-size: 150px;
+  }
+
   nav ul {
-    display: flex;
+    display: none;
+    visibility: hidden;
     flex-direction: column;
   }
 }
