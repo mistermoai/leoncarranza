@@ -1,13 +1,17 @@
 * {
-  margin: 0;
+  margin: auto 0;
   padding: 0;
 
   box-sizing: border-box;
   /* padding and border are included in width and height of element  */
+
+  width: auto;
+  overflow-x: hidden;
 }
 
 body {
   font-family: sans-serif;
+  /* background-color: red; */
   background-color: #f7efeb;
   color: black;
   max-height: 100%;
@@ -51,6 +55,46 @@ h1 a:hover {
   color: #FFC300;
 }
 
+h2 {
+  font-size: 2rem;
+  padding: 1.5rem .25rem;
+  background-color: #333333;
+  color: white;
+}
+
+h3 {
+  font-size: 1.5rem;
+  padding: 1rem .25rem;
+  background-color: #bbbbbb;
+}
+
+h4 {
+  font-size: 1.3rem;
+  padding: 1rem .25rem;
+}
+
+section p {
+  font-size:1.2rem;
+  padding: 1rem .25rem;
+}
+
+
+aside ul {
+  font-size:1.2rem;
+  padding: 1rem .25rem;
+}
+
+aside ul li {
+  list-style: none;
+}
+
+footer {
+  background-color: #333333;
+  color: white;
+  font-size:1.2rem;
+  padding: 1rem .25rem;
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -92,7 +136,7 @@ nav ul li:hover {
   height:100%;
 }
 
-/* STYLING NAV BAR */
+
 
 /* ----------- STYLING ART PORTFOLIO PREVIEW ---------------- */
 main {
@@ -151,7 +195,7 @@ main {
 .preview-text p {
   position: absolute;
   top:0%;
-  font-size: 3rem;
+  font-size: 1rem;
   font-family: sans-serif;
   color: white;
   padding-left: 5px;
@@ -231,82 +275,29 @@ footer {
     visibility: hidden;
   }
 
-}
+  /* VVV STYLING RESUME VVV */
 
-/* body {
-  background-color: #f7efeb;
-  font-family: sans-serif;
-}
+  .resume {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* background-color: red; */
+    align-items: stretch;
+    box-sizing: border-box;
+  }
 
-a h1 {
-  color: white;
-  background-color: #003366;
-  text-decoration: none;
-}
+  .resume-col1 {
+    /* background-color: red; */
+    width: 50%;
+    margin-top: 0;
+    padding-right: 5px;
+  }
 
-a {
-  text-decoration: none;
-  color: #003366;
-}
+  .resume-col2 {
+    /* background-color: blue; */
+  }
 
-a:hover {
-  color: #FFC300;
-}
 
-h1 {
-  font-stretch: Expanded;
-  text-decoration: none;
-}
+  /* ^^^ STYLING NAV BAR ^^^ */
 
-ul li {
-  list-style: none;
 }
-
-footer {
-  border-style: solid none none none;
-  font-size: 60%;
-}
-
-img {
-  max-width:800px;
-  width:100%;
-}
-
-article {
-  border-style: solid none none none;
-}
-
-iframe {
-  border: none;
-  width: 560px;
-  height:315px;
-}
-
-nav {
-  padding: 0 15% 0 5%;
-}
-
-nav ul {
-  display: flex;
-  flex-direction:row;
-  justify-content: space-between;
-}
-
-nav ul li {
-  padding: 5px;
-  border-style: solid;
-  color: #003366;
-}
-
-.archclass {
-  display: flex;
-  flex-direction: row;
-}
-
-.archentry {
-  padding: 0 20px 0 20px;
-}
-
-.description {
-  margin-bottom: 10px;
-} */
