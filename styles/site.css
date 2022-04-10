@@ -10,7 +10,7 @@ body {
   font-family: sans-serif;
   background-color: #f7efeb;
   color: black;
-
+  max-height: 100%;
 }
 
 /* STYLING NAV BAR */
@@ -18,7 +18,27 @@ body {
 header {
   font-size: 1.5rem;
   background-color: #4C676F;
+  display: block;
+  height: 100%;
 }
+
+.header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-row-item {
+  color: white;
+  padding: .5rem .5rem;
+}
+
+.header-row-item:hover {
+  color: #d9b00d;
+  cursor: pointer;
+}
+
 
 h1 a {
   text-decoration: none;
@@ -70,6 +90,18 @@ nav ul li:hover {
 }
 
 /* STYLING NAV BAR */
+
+
+main {
+  /* display: none;
+  visibility: hidden; */
+}
+
+
+footer {
+  /* display: none;
+  visibility: hidden; */
+}
 
 
 /* body {
