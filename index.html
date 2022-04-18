@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <!-- ------------------ HEADER ------------------ -->
+    <!--  HEADER  -->
       <header>
 
         <div class="header-row">
@@ -17,13 +17,13 @@
             <h1><a href="index.html">Leon Carranza</a></h1>
           </div>
 
-          <div class="header-row-item hamburger">
+          <div class="header-row-item" id="hamburger">
             <h1>&#9776;</h1>
           </div>
 
         </div>
 
-        <nav>
+        <nav class="hidden">
           <ul>
             <li><a href="resume.html">Resume</a> </li>
             <li><a href="contact.html">Contact</a> </li>
@@ -32,23 +32,25 @@
             <li><a href="architecture.html">Architecture </a></li>
             <li><a href="graphic-design.html">Graphic Design </a></li>
             <li><a href="art.html">Art </a></li>
-            <li><a href="miscellaneous.html">Miscellaneous Projects</a></li>
+            <li><a href="miscellaneous.html">Miscellaneous</a></li>
           </ul>
         </nav>
       </header>
 
-    <!-- ------------------ HEADER ------------------ -->
+    <!--  HEADER  -->
+
+<div class="maincontent">
 
   <main>
     <div class="mobilepreview">
 
-<!-- -----------PLACE IMAGE CONTAINERS HERE ----------- -->
+<!-- PLACE IMAGE CONTAINERS HERE  -->
       <div class="mobilepreview-col">
 
       <div class="mobilepreview-item">
         <a href="art.html">
           <div class="image-container">
-            <img src="images/art/artpreview/webpreview/salvation_webpreview.png" alt="Salvation Preview">
+            <img src="images/imagelinks/art_imagelink.png" alt="Salvation Link">
             <!-- Source: Me -->
             <div class="preview-text">
               <p>Art</p>
@@ -60,7 +62,7 @@
       <div class="mobilepreview-item">
         <a href="animation.html">
           <div class="image-container">
-            <img src="images/art/artpreview/webpreview/salvation_webpreview.png" alt="Salvation Preview">
+            <img src="images/animation/wil_animation.gif" alt="Animation Link">
             <!-- Source: Me -->
             <div class="preview-text">
               <p>Animation</p>
@@ -69,19 +71,19 @@
         </a>
       </div>
 
-<!-- -----------PLACE IMAGE CONTAINERS HERE ----------- -->
+<!-- PLACE IMAGE CONTAINERS HERE  -->
 
     </div>
 
 
       <div class="mobilepreview-col">
 
-<!-- -----------PLACE IMAGE CONTAINERS HERE ----------- -->
+<!-- PLACE IMAGE CONTAINERS HERE  -->
         <div class="mobilepreview-item">
 
           <a href="architecture.html">
             <div class="image-container">
-              <img src="images\architecture\archpreview\architecture_preview.png" alt="architecture Preview">
+              <img src="images/imagelinks/architecture_imagelink.png" alt="Architecture Link">
               <!-- Source: Me -->
               <div class="preview-text">
                 <p>Architecture</p>
@@ -90,9 +92,9 @@
           </a>
         </div>
 
-        <a href="architecture.html">
+        <a href="graphic-design.html">
           <div class="image-container">
-            <img src="images\architecture\archpreview\architecture_preview.png" alt="architecture Preview">
+            <img src="images/imagelinks/graphicdesign_imagelink.png" alt="Graphic Design link">
             <!-- Source: Me -->
             <div class="preview-text">
               <p>Graphic Design</p>
@@ -102,18 +104,7 @@
       </div>
 
 </div>
-<!-- -----------PLACE IMAGE CONTAINERS HERE ----------- -->
-
-
-
-
-
-
-      </div>
-
-
-    </div>
-
+<!-- PLACE IMAGE CONTAINERS HERE  -->
 
     <section>
       <h2>What's New?</h2>
@@ -131,6 +122,9 @@
       <p>First Posted 2/9/2022 | Last Updated 2/9/2022</p>
       <p>Email Me: lac336@cornell.edu </p>
     </footer>
+</div>
 
+      <script type="text/javascript" src="scripts/jquery-3.6.0.js"></script>
+      <script type="text/javascript" src="scripts/hamburger.js"></script>
   </body>
-</html>
+  </html>

@@ -15,6 +15,7 @@ body {
   background-color: #f7efeb;
   color: black;
   max-height: 100%;
+  margin: 0 auto;
 }
 
 /* STYLING NAV BAR */
@@ -23,7 +24,13 @@ header {
   font-size: 1.5rem;
   background-color: #003366;
   display: block;
+  margin: 0;
   height: 100%;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
 }
 
 .header-row {
@@ -31,6 +38,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
 }
 
 .header-row-item {
@@ -57,8 +65,9 @@ h1 a:hover {
 
 h2 {
   font-size: 2rem;
+  margin-top: 2rem;
   padding: 1.5rem .25rem;
-  background-color: #333333;
+  background-color: #000000;
   color: white;
 }
 
@@ -70,7 +79,6 @@ h3 {
 
 h4 {
   font-size: 1.3rem;
-  padding: 1rem .25rem;
 }
 
 section p {
@@ -100,6 +108,8 @@ nav {
   flex-direction: column;
   align-items: center;
   box-sizing: content-box;
+  background-color: #222222;
+  height:100%;
 }
 
 nav ul {
@@ -112,7 +122,7 @@ nav ul li {
   list-style: none;
   box-sizing: content-box;
   width:100%;
-  height:100%;
+  height:inherit;
   border-bottom-style: solid;
   border-color: #f7efeb;
 }
@@ -124,7 +134,7 @@ nav ul li a {
   width: 100%;
   height:100%;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
 
 nav ul li:hover {
@@ -136,7 +146,9 @@ nav ul li:hover {
   height:100%;
 }
 
+.maincontent {
 
+}
 
 /* ----------- STYLING ART PORTFOLIO PREVIEW ---------------- */
 main {
@@ -175,6 +187,12 @@ main {
 
 .image-container {
   position: relative;
+  padding-bottom: 0 0;
+  margin: 0 0;
+}
+
+.image-container:hover {
+  cursor: pointer;
 }
 
 .preview-text {
@@ -195,7 +213,7 @@ main {
 .preview-text p {
   position: absolute;
   top:0%;
-  font-size: 1rem;
+  font-size: 2rem;
   font-family: sans-serif;
   color: white;
   padding-left: 5px;
@@ -215,6 +233,131 @@ footer {
   visibility: hidden; */
 }
 
+.description {
+  padding: 2rem 0 2rem 0;
+}
+
+/* VVV STYLING ACCORDION VVV */
+.accordion {
+  background-color: #dddddd;
+  /* visibility: hidden; */
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.accordion-header {
+  background-color: #444444;
+  min-height: 3.5rem;
+  padding: 1rem 3rem 1rem .75rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.accordion-header:hover {
+  background-color: #888888;
+}
+
+.accordion-item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-header::after {
+  content: "\25BE";
+  position: absolute;
+  right: 1rem;
+}
+
+.accordion-header.active::after {
+  content: "\25BE";
+  position: absolute;
+  right: 1rem;
+  transform: rotate(180deg);
+}
+
+.accordion-subheader{
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 3rem 1rem 1.5rem;
+}
+
+.accordion-step {
+  padding: 1.5rem 2rem 3rem 2rem;
+}
+
+.accordion-download {
+  text-align: right;
+  padding-right: 2rem;
+  padding-bottom: .5rem;
+}
+
+.accordion-download a {
+  font-size: 1.5rem;
+}
+
+/* ^^^ STYLING ACCORDION ^^^ */
+
+/* VVVV MODAL CONTENT vvvv */
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index:1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: rgb(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 500px;
+  color: white;
+}
+
+.caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+}
+
+.close:hover {
+  cursor: pointer;
+  color: #FFC300;
+}
+
+.zoom {
+  width: 120% !important;
+  height: auto;
+}
+
+/* ^^^^ MODAL CONTENT ^^^^ */
+
+
 
 /* Desktop Display */
 @media only screen and (min-width: 850px) {
@@ -223,16 +366,24 @@ footer {
   } */
 
   body {
+    /* padding: 0 5rem; */
+  }
+
+  .maincontent {
     padding: 0 5rem;
   }
 
-
-
   nav {
-    display: flex;
+    display: flex !important;
     flex-direction: row;
-    align-items: center;
     box-sizing: content-box;
+    margin: auto 0;
+    visibility: visible !important;
+  }
+
+  #hamburger {
+    display: none;
+    visbility: hidden;
   }
 
   nav ul {
@@ -259,7 +410,6 @@ footer {
     color: white;
     height:auto;
     justify-content: center;
-    padding: auto 0;
   }
 
   nav ul li:hover {
@@ -268,11 +418,6 @@ footer {
     box-sizing: content-box;
     border-bottom-style: none;
     height: auto;
-  }
-
-  .hamburger {
-    display: none;
-    visibility: hidden;
   }
 
   /* VVV STYLING RESUME VVV */
@@ -298,6 +443,43 @@ footer {
   }
 
 
-  /* ^^^ STYLING NAV BAR ^^^ */
+  /* ^^^ STYLING RESUME ^^^ */
 
+  /* VVV STYLING ACCORDION VVV */
+    .accordion {
+      width: 85%;
+    }
+
+    .accordion-item-content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .accordion-item-content h4 {
+      margin: 0 0 0 0;
+    }
+
+    .accordion-step {
+      width: 50%;
+    }
+
+    .accordion-step img {
+      width:100%;
+    }
+  /* ^^^ STYLING ACCORDION ^^^ */
+
+  /* VVV STYLING ART PORTFOLIO VVV*/
+
+  .preview-text p {
+    position: absolute;
+    top:0%;
+    font-size: 3rem;
+    font-family: sans-serif;
+    color: white;
+    padding-left: 5px;
+  }
+
+  /* ^^^ STYLING ART PORTFOLIO ^^^ */
 }
