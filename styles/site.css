@@ -429,6 +429,7 @@ footer {
   backdrop-filter: blur(10px);
   padding-left:5%;
   padding-right:5%;
+  padding-bottom: 10%;
 }
 
 .caption {
@@ -489,7 +490,6 @@ h5 {
 }
 
 button, input[type="submit"], input[type="reset"] {
-  visibility: hidden;
 	background: none;
 	color: inherit;
   border: solid;
