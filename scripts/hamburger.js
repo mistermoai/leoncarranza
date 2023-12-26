@@ -3,13 +3,14 @@ $("#hamburger").click(function() {
 
   if ($("nav").hasClass('hidden')) {
     $("nav").removeClass('hidden');
-    $(".maincontent").addClass('hidden');
+    $("ul").fadeIn();
+    $(".maincontent").fadeOut();
 
   } else {
     $("nav").addClass('hidden');
     $("main").removeClass('hidden');
     $("footer").removeClass('hidden');
-    $(".maincontent").removeClass('hidden');
+    $(".maincontent").fadeIn();
   }
 
 });
