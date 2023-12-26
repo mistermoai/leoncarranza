@@ -3,7 +3,7 @@ $("#hamburger").click(function() {
 
   if ($("nav").hasClass('hidden')) {
     $("nav").removeClass('hidden');
-    $("ul").fadeIn();
+    $("nav").fadeIn();
     $(".maincontent").fadeOut();
 
   } else {
