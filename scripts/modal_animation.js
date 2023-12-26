@@ -1,5 +1,26 @@
 // WIL
-$("#wil").click(function() {
+$(document).on('keydown', function(event) {
+  if (event.key == "Escape") {
+    $("modal1").fadeOut();
+    $("#modal1").delay("2").addClass("hidden");
+    $("modal1").delay(.005).animate({opacity: "0"});
+    $("div.modalhide").removeClass("hidden");
+  }
+});
+
+$('body').click((event) => {
+  if (event.target.id !== 'modal1') {
+    console.log('clicked in modal');
+  } else {
+    console.log('clicked out of modal');
+    $("modal1").fadeOut();
+    $("#modal1").delay("2").addClass("hidden");
+    $("modal1").delay(.005).animate({opacity: "0"});
+    $("div.modalhide").removeClass("hidden");
+  }
+});  
+
+$("#gtgvsmullet").click(function() {
   console.log("item click");
   $("#modal1").removeClass("hidden");
   $("div.modalhide").addClass("hidden");
@@ -11,129 +32,3 @@ $("span.close").click(function() {
   $("div.modalhide").removeClass("hidden");
 });
 // WIL
-
-// LUCCA
-$("#lucca").click(function() {
-  console.log("item click");
-  $("#modal2").removeClass("hidden");
-  $("div.modalhide").addClass("hidden");
-});
-
-$("span.close").click(function() {
-  console.log("item click");
-  $("#modal2").addClass("hidden");
-  $("div.modalhide").removeClass("hidden");
-});
-// LUCCA
-
-// FENCES
-$("#fences").click(function() {
-  console.log("item click");
-  $("#modal3").removeClass("hidden");
-  $("div.modalhide").addClass("hidden");
-});
-
-$("span.close").click(function() {
-  console.log("item click");
-  $("#modal3").addClass("hidden");
-  $("div.modalhide").removeClass("hidden");
-});
-// FENCES
-
-// GRIS
-$("#gris").click(function() {
-  console.log("item click");
-  $("#modal4").removeClass("hidden");
-  $("div.modalhide").addClass("hidden");
-});
-
-$("span.close").click(function() {
-  console.log("item click");
-  $("#modal4").addClass("hidden");
-  $("div.modalhide").removeClass("hidden");
-});
-// GRIS
-
-// ROOT
-$("#root").click(function() {
-  console.log("item click");
-  $("#modal5").removeClass("hidden");
-  $("div.modalhide").addClass("hidden");
-});
-
-$("span.close").click(function() {
-  console.log("item click");
-  $("#modal5").addClass("hidden");
-  $("div.modalhide").removeClass("hidden");
-});
-// ROOT
-
-// KALEIDOSCOPE
-$("#kaleidoscope").click(function() {
-  console.log("item click");
-  $("#modal6").removeClass("hidden");
-  $("div.modalhide").addClass("hidden");
-});
-
-$("span.close").click(function() {
-  console.log("item click");
-  $("#modal6").addClass("hidden");
-  $("div.modalhide").removeClass("hidden");
-});
-// KALEIDOSCOPE
-
-// KALEIDOSCOPE
-$("#lifeinruins").click(function() {
-  console.log("item click");
-  $("#modal7").removeClass("hidden");
-  $("div.modalhide").addClass("hidden");
-});
-
-$("span.close").click(function() {
-  console.log("item click");
-  $("#modal7").addClass("hidden");
-  $("div.modalhide").removeClass("hidden");
-});
-// KALEIDOSCOPE
-
-// MEMENTO
-$("#memento").click(function() {
-  console.log("item click");
-  $("#modal8").removeClass("hidden");
-  $("div.modalhide").addClass("hidden");
-});
-
-$("span.close").click(function() {
-  console.log("item click");
-  $("#modal8").addClass("hidden");
-  $("div.modalhide").removeClass("hidden");
-});
-// MEMENTO
-
-// MOUNTAIN
-$("#mountain").click(function() {
-  console.log("item click");
-  $("#modal9").removeClass("hidden");
-  $("div.modalhide").addClass("hidden");
-});
-
-$("span.close").click(function() {
-  console.log("item click");
-  $("#modal9").addClass("hidden");
-  $("div.modalhide").removeClass("hidden");
-});
-// MOUNTAIN
-
-// SALVATION
-$("#salvation").click(function() {
-  console.log("item click");
-  $("#modal10").removeClass("hidden");
-  $("div.modalhide").addClass("hidden");
-});
-
-$("span.close").click(function() {
-  console.log("item click");
-  $("#modal10").addClass("hidden");
-  $("div.modalhide").removeClass("hidden");
-});
-// SALVATION
