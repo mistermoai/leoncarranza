@@ -11,7 +11,7 @@ $("#hamburger").click(function() {
   console.log("test");
 
   if ($("nav").hasClass('hidden')) {
-    $(".maincontent").delay(.0000005).animate({opacity: "0"});
+    $(".maincontent").delay(.0000005).animate({opacity: "0"}); 
     $(".maincontent").addClass('hidden');
     $("nav").fadeIn();
     $("nav").animate({height: "50%"});
