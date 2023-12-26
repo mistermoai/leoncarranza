@@ -163,7 +163,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .mobilepreview {
