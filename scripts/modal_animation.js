@@ -52,11 +52,9 @@ $('body').on("tap",function(){
   }
 });
 
-$("button").on("tap",function(){
+$("span.close").on("tap",function(){
   console.log("item click");
   $("#modal1").addClass("hidden");
   $("div.modalhide").removeClass("hidden");
 });      
-
-
 // WIL
