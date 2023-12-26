@@ -53,15 +53,9 @@ $('body').on("tap",function(){
 });
 
 $("button").on("tap",function(){
-  if (event.target.id !== 'modal1') {
-    console.log('clicked in modal');
-  } else {
-    console.log('clicked out of modal');
-    $("modal1").fadeOut();
-    $("#modal1").delay("2").addClass("hidden");
-    $("modal1").delay(.005).animate({opacity: "0"});
-    $("div.modalhide").removeClass("hidden");
-  }
+  console.log("item click");
+  $("#modal1").addClass("hidden");
+  $("div.modalhide").removeClass("hidden");
 });      
 
 

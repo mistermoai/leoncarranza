@@ -489,6 +489,7 @@ h5 {
 }
 
 button, input[type="submit"], input[type="reset"] {
+  visibility: hidden;
 	background: none;
 	color: inherit;
   border: solid;
