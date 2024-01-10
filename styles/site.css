@@ -40,17 +40,17 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .header-row-item {
   color: black;
   padding: .5rem .5rem;
+  filter: drop-shadow(0 2mm 2mm rgb(0,0,0,.5));
 }
 
 .header-row-item:hover {
   transition: color .2s;
-  color: #d1c992;
+  color: #ECDCB0;
   cursor: pointer;
 }
 
@@ -63,7 +63,7 @@ h1 a {
 
 h1 a:hover {
   transition: color .2s;
-  color: #d1c992;
+  color: #ECDCB0;
 }
 
 h2 {
@@ -147,13 +147,13 @@ nav ul li a {
 }
 
 nav ul li:hover {
-  background-color: #d1c992;
+  background-color: #ECDCB0;
   list-style: none;
   box-sizing: content-box;
 }
 
 nav ul li a:hover {
-  background-color: #d1c992;
+  background-color: #ECDCB0;
   list-style: none;
   box-sizing: content-box;
 }
@@ -248,14 +248,14 @@ main {
 .card {
     background: #FAFAFA;
     border-radius: 1.5rem;
-    padding: 1rem;
+    padding: .8rem;
     transition: all .2s ease-in-out; 
     width: 100%;
     box-shadow: 0px 5px 10px rgb(9 9 9);
   }
 
 .card:hover {
-  background-color: #d1c992;
+  background-color: #ECDCB0;
   transition-delay:.05s;
 }
 
@@ -291,6 +291,18 @@ main {
   padding-top:.25rem;
   padding-bottom: .5rem;
   font-weight:bold;
+}
+
+.cardtag-important{
+  display: inline-block;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  padding: .125rem 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  border: 4px solid black;
+  background-color: white;
 }
 
 .cardtags{
@@ -429,7 +441,7 @@ footer {
   backdrop-filter: blur(10px);
   padding-left:5%;
   padding-right:5%;
-  padding-bottom: 20%;
+  padding-bottom: 10%;
 }
 
 .caption {
@@ -452,7 +464,7 @@ footer {
 
 .close:hover {
   cursor: pointer;
-  color: #d1c992;
+  color: #ECDCB0;
 }
 
 .zoom {
@@ -477,6 +489,7 @@ footer {
 
 .modal-card:hover {
   scale: 1.05;
+  cursor: pointer;
 }
 
 .modal-header {
@@ -523,9 +536,8 @@ button:hover{
 
 iframe {
   min-width:315px;
-  min-height: 450px;
+  min-height: 600px;
   width:40%;
-  height:40%;
 }
 
 /* ^^^^ MODAL CONTENT ^^^^ */
@@ -557,7 +569,7 @@ iframe {
     z-index: 20;
     margin: auto 0;
     visibility: visible !important;
-    filter: drop-shadow(0 2mm 2mm rgb(0,0,0,.5));  }
+  }
 
   #hamburger {
     display: none;
@@ -594,7 +606,7 @@ iframe {
   }
 
   nav ul li:hover {
-    background-color: #d1c992;
+    background-color: #ECDCB0;
     box-sizing: content-box;
     border-bottom-style: none;
     height: auto;
