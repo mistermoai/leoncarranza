@@ -160,6 +160,11 @@ nav ul li a:hover {
   box-sizing: content-box;
 }
 
+model-viewer {
+  min-width: 100px;
+  min-height: 100px;
+}
+
 /* ----------- STYLING ART PORTFOLIO PREVIEW ---------------- */
 main {
   max-width: 100%;
