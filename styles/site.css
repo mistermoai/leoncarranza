@@ -161,7 +161,7 @@ nav ul li a:hover {
 }
 
 model-viewer {
-  min-width: 100px;
+  min-width: 120px;
   min-height: 350px;
   padding: 2rem;
 }
