@@ -161,8 +161,9 @@ nav ul li a:hover {
 }
 
 model-viewer {
-  min-width: 100px;
-  min-height: 100px;
+  min-width: 300px;
+  min-height: 150px;
+  padding: 2rem;
 }
 
 /* ----------- STYLING ART PORTFOLIO PREVIEW ---------------- */
