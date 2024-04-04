@@ -257,9 +257,10 @@ main {
   }
 
 .card:hover {
-  background-color: #ECDCB0;
+  background-color: #f9f9f9;
   transition-delay:.05s;
 }
+
 
 /* Overlay example */
 .card {
