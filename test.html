@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+
     <meta charset="utf-8">
     <title>Leon Carranza's Website</title>
     <link rel="stylesheet" href="styles/site.css">
@@ -8,12 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="website-assets\favicon.png">
-    <title>&lt;model-viewer&gt; template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="model/text/css" href="./styles.css" rel="stylesheet"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="model/text/css" href="model/styles.css" rel="stylesheet"/>
   </head>
 
   <body>
@@ -47,8 +48,9 @@
     <!--  HEADER  -->
 
 <div class="maincontent">
+
   <!-- <model-viewer> HTML element -->
-    <model-viewer src="peugeot-206.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="commerce" poster="poster.webp" shadow-intensity="1">
+    <model-viewer src="model/peugeot-206.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="commerce" poster="model/poster.webp" shadow-intensity="1">
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -56,109 +58,16 @@
           View in your space
       </button>
       <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
+          <img src="model/ar_hand_prompt.png">
       </div>
     </model-viewer>  
-    <script src="script.js"></script>
+    <script src="model/script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
     <!-- <model-viewer> HTML element -->
-      
+
   <H2>RECENT WORK</H2>
-  <main>
-            
-      <!-- CARD START -->
-        <a href="groove-that-goob.html" class="cardlink">
-          <div class="card">
-            <img src="images\gtg_500x250px.png" alt="">
-            <p class="cardtitle">Groove that Goob!</p>
-            <div class="cardtags">
-              <p class="cardtag-important">Video Game</p>
-              <p class="cardtag">Animation</p>
-              <p class="cardtag">Prototyping</p>
-            </div>
-            <div class="cardtags">
-              <p class="cardtag">Video Editing</p>
-              <p class="cardtag">Graphic Design</p>
-            </div>
-          </div>
-        </a>
-        <!-- CARD END -->
-
-        <!-- CARD START -->
-        <a href="/path/of/product" class="cardlink">
-          <div class="card">
-            <img src="images\semanticaster_500x250px.png" alt="">
-            <p class="cardtitle">Semanticaster</p>
-            <div class="cardtags">
-              <p class="cardtag">Digital Fabrication</p>
-              <p class="cardtag">AI-Guided Design</p>
-              <p class="cardtag">Prototyping</p>
-            </div>
-            <div class="cardtags">
-              <p class="cardtag">Architecture</p>
-              <p class="cardtag">Luthiery</p>
-            </div>
-          </div>
-        </a>
-        <!-- CARD END -->
-
-        <!-- CARD START -->
-        <a href="/path/of/product" class="cardlink">
-          <div class="card">
-            <img src="website-assets\philippines-shipping-simulation_500x250px.png" alt="">
-            <p class="cardtitle">Philippines Shipping Simulation</p>
-            <div class="cardtags">
-              <p class="cardtag">Unreal Engine</p>
-              <p class="cardtag">Blender</p>
-              <p class="cardtag">Group Project</p>
-            </div>
-          </div>
-        </a>
-        <!-- CARD END -->
-
-        <!-- CARD START -->
-        <a href="/path/of/product" class="cardlink">
-          <div class="card">
-            <img src="website-assets\pochita-slinky_500x250px.png" alt="">
-            <p class="cardtitle">Pochita Slinky</p>
-            <div class="cardtags">
-              <p class="cardtag">Digital Fabrication</p>
-              <p class="cardtag">Personal Project</p>
-              <p class="cardtag">bussin</p>
-            </div>
-          </div>
-        </a>
-        <!-- CARD END -->
-
-        <!-- CARD START -->
-        <a href="/path/of/product" class="cardlink">
-          <div class="card">
-            <img src="website-assets\parametric-modeling_500x250px.png" alt="">
-            <p class="cardtitle">Grasshopper Scripts</p>
-            <div class="cardtags">
-              <p class="cardtag">Digital Fabrication</p>
-              <p class="cardtag">Parametric Design</p>
-              <p class="cardtag">Architecture</p>
-            </div>
-          </div>
-        </a>
-        <!-- CARD END -->
-
-        <!-- CARD START -->
-        <a href="/path/of/product" class="cardlink">
-          <div class="card">
-            <img src="website-assets\longboard_500x250px.png" alt="">
-            <p class="cardtitle">Longboard</p>
-            <div class="cardtags">
-              <p class="cardtag">Digital Fabrication</p>
-              <p class="cardtag">Woodworking</p>
-              <p class="cardtag">Personal Project</p>
-            </div>
-          </div>
-        </a>
-        <!-- CARD END -->
-        
+  
 
   </main>
     <footer>
