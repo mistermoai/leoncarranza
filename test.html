@@ -50,21 +50,39 @@
 <div class="maincontent">
 
   <!-- <model-viewer> HTML element -->
-    <model-viewer src="model/peugeot-206.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="commerce" poster="model/poster.webp" shadow-intensity="1">
-      <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
-      </div>
-      <button slot="ar-button" id="ar-button">
-          View in your space
-      </button>
-      <div id="ar-prompt">
-          <img src="model/ar_hand_prompt.png">
-      </div>
-    </model-viewer>  
-    <script src="model/script.js"></script>
-    <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    
     <!-- <model-viewer> HTML element -->
+
+      <!-- CARD START -->
+      <a href="/path/of/product" class="cardlink">
+        <div class="card">
+          <model-viewer src="model/peugeot-206.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="commerce" poster="model/poster.webp" shadow-intensity="1">
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
+            <div id="ar-prompt">
+                <img src="model/ar_hand_prompt.png">
+            </div>
+          </model-viewer>  
+          <script src="model/script.js"></script>
+          <!-- Loads <model-viewer> for browsers: -->
+          <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+          <p class="cardtitle">Semanticaster</p>
+          <div class="cardtags">
+            <p class="cardtag">Digital Fabrication</p>
+            <p class="cardtag">AI-Guided Design</p>
+            <p class="cardtag">Prototyping</p>
+          </div>
+          <div class="cardtags">
+            <p class="cardtag">Architecture</p>
+            <p class="cardtag">Luthiery</p>
+          </div>
+        </div>
+      </a>
+      <!-- CARD END -->
 
   <H2>RECENT WORK</H2>
   
