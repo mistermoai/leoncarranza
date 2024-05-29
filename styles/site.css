@@ -9,6 +9,16 @@
   overflow-x: hidden;
 }
 
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-family: 'Roboto', sans-serif;
@@ -345,6 +355,8 @@ text-align: center;
   scale: 1.05;
 }
 
+
+
 /* carousel from codepen  */
 
 
@@ -568,6 +580,7 @@ iframe {
 
   main {
     padding: 2rem;
+    justify-content: center;
   }
 
   nav {
@@ -578,6 +591,8 @@ iframe {
     margin: auto 0;
     visibility: visible !important;
   }
+
+  
 
   #hamburger {
     display: none;
