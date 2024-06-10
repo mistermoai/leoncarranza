@@ -30,6 +30,13 @@ header {
   height: 100%;
 }
 
+p2 {
+  padding-top: 3rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 6rem;
+}
+
 .hidden {
   display: none;
   visibility: hidden;
