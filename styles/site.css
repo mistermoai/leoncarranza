@@ -410,6 +410,7 @@ text-align: center;
 
 .carousel-button {
   position: absolute;
+  color: black;
   font-size: 3rem;
   z-index: 10;
   top: 50%;
