@@ -41,21 +41,10 @@
   <!--  HEADER  -->
 
     <h2>(Dis)continuous (Dis)orientation: A Unity VR Game</h2>
-    <div class="description">
-      <em>This is work I have done for the second assignment for Professor Ryan Whitby's Spring 2024 Dreamlands Studio.</em>
-      <em>From the syllabus: </em>
-      <br></br>
-      <em>This studio course explores the integration of AI and text-based image generators within
-        architectural design. Its main aim is to combine traditional architectural methods with the
-        capabilities of AI, creating an environment where students can experiment with and
-        conceptualize designs that push beyond standard practices. The course emphasizes hands-on
-        experience, teaching students to merge digital AI-generated designs with physical construction
-        techniques, focusing on materiality and structural soundness.</em>
-
-    </div>
 
     <main>
 
+      <h3>Final Presentation:</h3>
       <div class="carousel" data-carousel>
           
         <button class ="carousel-button prev" data-carousel-button="prev">&#8678;</button>
@@ -84,6 +73,16 @@
         </ul>
       </div>
 
+      <div class="description">
+        <h3>Class: Coding for Design II</h3>
+        <p>This class is focused on teaching C# and Unity to the capacity of designing and creating meaningful spatial interactions. For our final project, we were tasked with creating a spatial interaction of our choosing that abstracts from the way we conventionally understand or move throughout a space.</p>
+        <h3>Group Members:</h3>
+            <p>Leon Carranza (Lead Programmer)</p>
+            <p>Prarthana Jathar</p>
+            <p>Nandini Mohan</p>
+      </div>
+
+
       <div class = "portfolio-content">
       </div>
       
@@ -94,6 +93,7 @@
             </div>
           <br>
           <iframe width="300" height="315" src="https://www.youtube.com/embed/NhFyq2RN-OM?si=D2e3zaFqMZDueVBTloop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <br>
         </div>
 
         
@@ -108,12 +108,118 @@
         
           <h3>Moving continually across intersecting meshes</h3>
             <div class="description">
-              <p>Our movement subvert the way we conventionally understand movement in architecture by making the form of the body one moves upon apparent. </p>
+              <p>I next made movement continuous as the player moved themselves between intersecting meshes. This involved constantly checking if the player was about to approach a mesh they weren't already stuck to using a spherecast.</p>
             </div>
           <br>
           <iframe width="300" height="315" src="https://www.youtube.com/embed/ie_Q54M2bco?si=JLWGlYfTxOXq0163" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+          <h3>Smooth movement and controls</h3>
+            <div class="description">
+              <p>The addition of quaternion lerps meant that players would now smoothly rotate from one rotation position to another. Additionally, input from the VR headset and controllers could now be collected to allow players to rotate and move objects throughout space. This allows for player-made intersections and paths.</p>
+            </div>
+          <br>
+          <iframe width="300" height="315" src="https://www.youtube.com/embed/jySvJxVq2vI?si=Y3EL0rv8Mg921mgZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+          <h3>More Final Gameplay Footage</h3>
+            <div class="description">
+              <p>It was now time to place the player in the intended mobius strip city. The overall shape of the city, the way the player must navigate it, and the materials all work to contribute to the defamiliarization of a space that is, at a glance, familiar to the player.</p>
+            </div>
+          <br>
+          <iframe width="300" height="315" src="https://www.youtube.com/embed/38HlJ8si4BY?si=AuDivz22IzW17dXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <br>
+          <iframe width="300" height="315" src="https://www.youtube.com/embed/-10WAMX7NfM?si=sfBm5q2FVbrfMqq-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+        </div>
+
+        <div class="videocontainer"> 
+          <h3>Code Snippets</h3>
+            <div class="description">
+              <p>Custom Movement:</p>
+              <pre>
+    void CustomMovement()
+    {
+        var stuck = false;
+
+        Vector3 new_p = transform.position;
+
+
+
+        if (_inputData._rightController.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 _rightAxis))
+        {
+            _rightAxis = new Vector2(_rightAxis.x, _rightAxis.y);
+            transform.Rotate(transform.forward, _rightAxis.x * 5.0f, Space.World);
+        }
+
+        if (_inputData._leftController.TryGetFeatureValue(CommonUsages.trigger, out float _triggerQuant))
+        {
+            _trigger = _triggerQuant;
+        }
+
+        if (_inputData._leftController.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 _leftAxis) && _trigger == 0)
+        {
+            _leftAxis = new Vector2(_leftAxis.x, _leftAxis.y);
+            transform.position += transform.up * _leftAxis.y * speed * Time.deltaTime;
+        }
+
+        sticky_collider = stickTo();
         
+        Vector3 cp = sticky_collider.ClosestPoint(new_p);
+
+        Ray r = new Ray(new_p, cp - new_p);
+
+        if (sticky_collider.Raycast(r, out var hit, Mathf.Infinity))
+        {
+            if (stuck == false)
+            {
+                transform.position = cp;
+                Quaternion OriginalRot = transform.rotation;
+                rotationGoal = Vector3.Lerp(new_p, cp + hit.normal, 10f * Time.deltaTime);
+                transform.LookAt(rotationGoal, transform.up);
+                Quaternion NewRot = transform.rotation;
+                transform.rotation = OriginalRot;
+                transform.rotation = Quaternion.Lerp(transform.rotation, NewRot, speed * Time.deltaTime);
+                stuck = true;
+            }
+
+            else if (stuck == true)
+            {
+                transform.position = cp;
+                Quaternion OriginalRot = transform.rotation;
+                rotationGoal = Vector3.Lerp(new_p, cp + hit.normal, 10f * Time.deltaTime);
+                transform.LookAt(rotationGoal, transform.up);
+                Quaternion NewRot = transform.rotation;
+                transform.rotation = OriginalRot;
+                transform.rotation = Quaternion.Lerp(transform.rotation, NewRot, speed * Time.deltaTime);
+                stuck = false;
+            }
+        }
+    }
+              </pre>
+            </div>
+            <div class="description">
+              <p>Sticking to Mesh Collider:</p>
+              <pre>
+                private Collider stickTo()
+                {
+                    origin = transform.position;
+                    direction = transform.up;
+                    RaycastHit spherehit;
+                    if (Physics.SphereCast(origin, sphereRadius, direction, out spherehit, maxDistance, layerMask, QueryTriggerInteraction.UseGlobal))
+                    {
+                        currentHitObject = spherehit.transform.gameObject;
+                        currentHitDistance = spherehit.distance;
+                        sticky_collider = spherehit.collider;
+                    }
+                    else
+                    {
+                        currentHitDistance = maxDistance;
+                        currentHitObject = null;
+                    }
+                    return sticky_collider;
+                }
+              </pre>
+            </div>
         </div>
         
         
