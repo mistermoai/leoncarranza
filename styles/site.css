@@ -457,7 +457,7 @@ footer {
 }
 
 .description {
-  padding: 2rem 6rem .2rem 6rem;
+  padding: 2rem 2rem .2rem 2rem;
 }
 
 /* VVV STYLING ACCORDION VVV */
@@ -645,6 +645,10 @@ iframe {
 
   body {
     padding: 0 5rem;
+  }
+
+  .description {
+    padding: 2rem 6rem .2rem 6rem;
   }
 
   .carousel {
