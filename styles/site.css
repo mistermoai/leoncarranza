@@ -637,6 +637,15 @@ iframe {
     justify-content: center;
   }
 
+  .taglink {
+    text-decoration: none;
+    display: block;
+    font-size: 1.25rem;
+    color: black;
+    height:auto;
+    justify-content: center;
+  }
+
   nav ul li:hover {
     background-color: #ECDCB0;
     box-sizing: content-box;
