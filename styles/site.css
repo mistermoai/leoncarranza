@@ -320,7 +320,7 @@ main img {
 .cardlink {
   display: flex;
   position: relative;
-  width: 25vw;
+  width: 100%;
   top: 0;
   right: 0;
   bottom: 0;
@@ -681,6 +681,10 @@ iframe {
   /* * {
     background-color:red;
   } */
+
+  .cardlink { 
+    width: 25vw;
+  }
 
   .videocontainer {
     padding: 1rem 2rem;
