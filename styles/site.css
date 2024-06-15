@@ -292,14 +292,35 @@ main img {
 .card {
   display: flex;
   flex-direction: column;
-    position: relative;
-    justify-items: center;
+  position: relative;
+  justify-items: center;
+  width: 100%;
+}
+
+.singlecardlink {
+  display: flex;
+  position: relative;
+  width: fit-content;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center; 
+  align-items: center;
+  margin: 1rem;
+  transition: all .2s ease-in-out; 
+  text-decoration: none;
+  padding: .5rem;
+}
+
+.singlecardlink img {
+  width: 50vw;
 }
 
 .cardlink {
   display: flex;
   position: relative;
-  width: fit-content;
+  width: 25vw;
   top: 0;
   right: 0;
   bottom: 0;
