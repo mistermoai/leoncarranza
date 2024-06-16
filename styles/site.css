@@ -186,6 +186,42 @@ main img {
   max-width: 100%;
 }
 
+.collage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.collage img {
+  padding: 1rem 1rem;
+  width: 40vw;
+}
+
+.small-collage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.small-collage img {
+  padding: 1rem 1rem;
+  width: 25vw;
+}
+
+.large-collage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.small-collage img {
+  padding: 1rem 1rem;
+  width: 40vw;
+}
+
 .portfolio-content {
   flex-basis: auto;
   flex-shrink: 2;
@@ -355,6 +391,18 @@ main img {
   font-weight: bold;
   border-radius: 25px;
   border: 4px solid black;
+  background-color: white;
+}
+
+.cardtag-inprogress{
+  display: inline-block;
+  color: green;
+  text-align: center;
+  justify-content: center;
+  padding: .125rem 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  border: 4px solid green;
   background-color: white;
 }
 
@@ -655,6 +703,11 @@ button, input[type="submit"], input[type="reset"] {
   padding: 1rem;
 }
 
+ .videocontainer iframe {
+  width: 70vw;
+  height: 30vh;
+  }
+
 .videocontainer pre {
   padding: 0 5rem;
   text-align: left;
@@ -669,12 +722,6 @@ button, input[type="submit"], input[type="reset"] {
   text-align: left;
 }
 
-iframe {
-  min-width:315px;
-  min-height: 600px;
-  width:40%;
-}
-
 /* ^^^^ MODAL CONTENT ^^^^ */
 
 
@@ -685,12 +732,26 @@ iframe {
     background-color:red;
   } */
 
+ 
+
   .cardlink { 
     width: 25vw;
   }
 
+  .singlecardlink img {
+    width: 30vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .videocontainer {
     padding: 1rem 2rem;
+  }
+
+  .videocontainer iframe {
+    width: 40vw;
+    height: 50vh;
   }
 
   .videocontainer .description {
