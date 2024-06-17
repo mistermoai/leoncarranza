@@ -747,6 +747,10 @@ button, input[type="submit"], input[type="reset"] {
     padding: 1rem 1rem;
     width: 40vw;
   }
+
+  .collage iframe {
+    padding: 1rem 1rem;
+  }
   
   .small-collage {
     display: flex;
