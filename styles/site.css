@@ -192,19 +192,19 @@ main img {
 
 .collage {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .collage img {
   padding: 1rem 1rem;
-  width: 40vw;
+  width: 75vw;
 }
 
 .small-collage {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -216,7 +216,7 @@ main img {
 
 .large-collage {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -736,7 +736,29 @@ button, input[type="submit"], input[type="reset"] {
     background-color:red;
   } */
 
- 
+  .collage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .collage img {
+    padding: 1rem 1rem;
+    width: 40vw;
+  }
+  
+  .small-collage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .small-collage img {
+    padding: 1rem 1rem;
+    width: 25vw;
+  }
 
   .cardlink { 
     width: 25vw;
