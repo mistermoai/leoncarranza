@@ -30,6 +30,10 @@ header {
   height: 100%;
 }
 
+em {
+  font-weight: 600;
+}
+
 p2 {
   padding-top: 3rem;
   padding-left: 5rem;
