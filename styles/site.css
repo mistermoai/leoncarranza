@@ -79,7 +79,7 @@ h1 a:hover {
 }
 
 h2 {
-  font-weight: 400;
+  font-weight: 450;
   text-align: center;
   font-size: 2rem;
   margin-top: 2rem;
@@ -89,13 +89,16 @@ h2 {
 }
 
 h3 {
-  font-weight: 350;
+  font-weight: 425;
   font-size: 1.5rem;
   padding: 1rem .25rem;
   background-color: #f9f9f9;
 }
 
 h4 {
+  
+  font-weight: 425;
+  font-style: italic;
   font-size: 1.3rem;
 }
 
@@ -956,3 +959,45 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 /* SLIDER STYLING */
+
+/* Desktop Display */
+@media only screen and (min-width: 2500px) {
+  * {
+    font-size: 2rem;
+  }
+
+  .resume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem !important;
+    height: 100%;
+    width:100%;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 3rem;
+  }
+
+  .resume p  {
+    font-size: 3rem;
+  }
+
+  .resume p em{
+    font-size: 3rem;
+  }
+  
+  .resume-col1 {
+    padding-right: 2rem;
+  }
+
+  
+}
