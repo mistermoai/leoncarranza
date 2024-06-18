@@ -410,6 +410,18 @@ main img {
   background-color: white;
 }
 
+.cardtag-steam{
+  display: inline-block;
+  color: blue;
+  text-align: center;
+  justify-content: center;
+  padding: .125rem 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  border: 4px solid blue;
+  background-color: white;s
+}
+
 .cardtags{
 text-align: center;
 }
@@ -762,7 +774,9 @@ button, input[type="submit"], input[type="reset"] {
   .small-collage img {
     padding: 1rem 1rem;
     width: 25vw;
+    height: 50vh;
   }
+  
 
   .cardlink { 
     width: 25vw;
