@@ -966,6 +966,14 @@ button, input[type="submit"], input[type="reset"] {
     font-size: 2rem;
   }
 
+  .small-collage {
+    scale: 150%;
+  }
+
+  img{
+    width: 20vw
+  }
+
   .resume {
     display: flex;
     align-items: center;
