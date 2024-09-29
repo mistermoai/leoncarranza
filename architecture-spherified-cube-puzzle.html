@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Leon Carranza's Website</title>
+    <link rel="stylesheet" href="styles/site.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="website-assets\favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <!--  HEADER  -->
+    <header>
+
+      <div class="header-row">
+
+        <div class="header-row-item">
+          <h1><a href="index.html">Leon Carranza</a></h1>
+        </div>
+
+        <div class="header-row-item" id="hamburger">
+          <h1>&#9776;</h1>
+        </div>
+
+      </div>
+
+      <nav class="hidden">
+        <ul class="fade">
+          <li><a href="resume.html">About</a> </li>
+          <li><a href="index.html">Full Portfolio</a> </li>
+          <li><a href="digitalfabrication.html">Digital Fabrication </a></li>
+          <li><a href="architecture.html">Architecture </a></li>
+          <li><a href="gamedesign.html">Game Design</a></li>
+        </ul>
+      </nav>
+    </header>
+
+  <!--  HEADER  -->
+
+    <h2>Multiscalar Truchet Tiling in Rhino</h2>
+
+    <main>
+        <h3>Sample Photos</h3>
+          <div class="videocontainer">
+            <div class="description"><p></p></div>
+              <div class="collage">
+                <img src="images/dali_truchet_1024x1024px.png" alt="">
+                <img src="images/whirlpool_1024x1024.png" alt="">
+                <img src="images/self-portrait_1024x1024px.png" alt="">
+              </div>
+            <div class="collage">
+              <img src="images/dali-reference_1024x1024px.png" alt="">
+              <img src="images/whirlpool_reference_1024x1024px.png" alt="">
+              <img src="images/self-portrait-reference_1024x1024px.png" alt="">
+            </div>
+            <h3>Put through ComfyUI Stable Diffusion / ControlNet:</h3>
+            <div class="collage">
+              <img src="images/whirlpool_1024x1024.png" alt="">
+              <img src="images/truchet/inverted_composite_1024px.png" alt="">
+              <img src="images/truchet/composite_1024px.png" alt="">
+            </div>
+            <div class="collage"></div>
+              
+              
+            </div>
+
+          </div>
+
+      <div class="description">
+        <em>Based on Christopher Carlson's <a href="https://christophercarlson.com/portfolio/multi-scale-truchet-patterns/">multiscalar truchet tiling technique</a> and Ned Batchelder's <a href="https://nedbatchelder.com/blog/202208/truchet_images.html">truchet images</a> which builds on top of it. </em>
+
+      </div>
+    </main>
+
+    <footer>
+      <p>First Posted 2/9/2022 | Last Updated 6/14/2024</p>
+    </footer>
+  </body>
+  
+<script type="text/javascript" src="scripts/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="scripts/hamburger.js"></script>
+<script type="text/javascript" src="scripts/carousel.js" defer></script>
+</html>
