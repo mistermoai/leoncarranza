@@ -339,6 +339,7 @@ main img {
   flex-direction: column;
   position: relative;
   justify-items: center;
+  align-items: center;
   width: 100%;
 }
 
